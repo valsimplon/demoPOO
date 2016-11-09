@@ -25,7 +25,25 @@ public class Personne {
 		this.age = age;
 		this.femme = true;
 	}
-	
+
+	public void declineTonIdentite() {
+		System.out.println("Je m'appelle " + this.prenom + " " + this.nom
+				+ " et j'habite à " + this.adresse);
+	}
+
+	public void feteTonAnniversaire() {
+		this.age = this.age + 1;
+		System.out.println(this.prenom + " " + this.nom + " fête ses "
+				+ this.age + " printemps");
+		// this.age++; => on incrémente d'une unité l'élément courant
+	}
+
+	public void demenage(String nouvelleAdresse) {
+		System.out.println(this.prenom + " " + this.nom + " déménage de "
+				+ this.adresse + " vers " + nouvelleAdresse);
+		this.adresse = nouvelleAdresse;
+	}
+
 	public String getPrenom() {
 		return prenom;
 	}
@@ -45,7 +63,7 @@ public class Personne {
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
 	}
-	
+
 	public String getNom() {
 		return nom;
 	}

@@ -9,6 +9,10 @@ public class Main {
 		eric.setFemme(false);
 		eric.setAdresse("Sartrouville");
 		System.out.println(eric);
+		eric.declineTonIdentite();
+		eric.feteTonAnniversaire();
+		eric.demenage("Montreuil");
+		System.out.println(eric);
 	}
 
 }

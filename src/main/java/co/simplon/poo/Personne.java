@@ -6,7 +6,7 @@ public class Personne {
 	private String nom;
 	private int age;
 	private boolean femme;
-	private String adresse;
+	private Adresse adresse;
 
 	/**
 	 * Constructeur d'une personne, reprenant les données obligatoire à la
@@ -28,7 +28,7 @@ public class Personne {
 
 	public void declineTonIdentite() {
 		System.out.println("Je m'appelle " + this.prenom + " " + this.nom
-				+ " et j'habite à " + this.adresse);
+				+ " et j'habite à " + this.adresse.getVille());
 	}
 
 	public void feteTonAnniversaire() {
@@ -38,9 +38,9 @@ public class Personne {
 		// this.age++; => on incrémente d'une unité l'élément courant
 	}
 
-	public void demenage(String nouvelleAdresse) {
+	public void demenage(Adresse nouvelleAdresse) {
 		System.out.println(this.prenom + " " + this.nom + " déménage de "
-				+ this.adresse + " vers " + nouvelleAdresse);
+				+ this.adresse.getVille() + " vers " + nouvelleAdresse.getVille());
 		this.adresse = nouvelleAdresse;
 	}
 
@@ -60,10 +60,6 @@ public class Personne {
 		this.femme = femme;
 	}
 
-	public void setAdresse(String adresse) {
-		this.adresse = adresse;
-	}
-
 	public String getNom() {
 		return nom;
 	}
@@ -72,8 +68,12 @@ public class Personne {
 		return age;
 	}
 
-	public String getAdresse() {
+	public Adresse getAdresse() {
 		return adresse;
+	}
+
+	public void setAdresse(Adresse adresse) {
+		this.adresse = adresse;
 	}
 
 	@Override

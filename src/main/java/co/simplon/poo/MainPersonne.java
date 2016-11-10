@@ -1,6 +1,6 @@
 package co.simplon.poo;
 
-public class Main {
+public class MainPersonne {
 
 	public static void main(String[] args) {
 		Personne eric = new Personne("Siber", "Eric", 35);

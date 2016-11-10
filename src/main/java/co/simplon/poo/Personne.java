@@ -2,11 +2,11 @@ package co.simplon.poo;
 
 public class Personne {
 
-	private String prenom;
+	protected String prenom;
 	private String nom;
 	private int age;
-	private boolean femme;
-	private Adresse adresse;
+	protected boolean femme;
+	protected Adresse adresse;
 
 	/**
 	 * Constructeur d'une personne, reprenant les données obligatoire à la
@@ -40,7 +40,7 @@ public class Personne {
 
 	public void demenage(Adresse nouvelleAdresse) {
 		System.out.println(this.prenom + " " + this.nom + " déménage de "
-				+ this.adresse.getVille() + " vers " + nouvelleAdresse.getVille());
+				+ this.adresse + " vers " + nouvelleAdresse);
 		this.adresse = nouvelleAdresse;
 	}
 
@@ -62,6 +62,11 @@ public class Personne {
 
 	public String getNom() {
 		return nom;
+	}
+	
+	protected void setNom(String nom) {
+		System.out.println("Attention changement de nom de " + this.nom + " à " + nom);
+		this.nom = nom;
 	}
 
 	public int getAge() {
